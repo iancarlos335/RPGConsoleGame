@@ -18,6 +18,28 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="objects\Bag.h" />
+    <ClInclude Include="objects\Belt.h" />
+    <ClInclude Include="objects\Element.h" />
+    <ClInclude Include="objects\Enemy.h" />
+    <ClInclude Include="objects\Hero.h" />
+    <ClInclude Include="objects\Map.h" />
+    <ClInclude Include="objects\Potion.h" />
+    <ClInclude Include="objects\SQM.h" />
+    <ClInclude Include="objects\Weapon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="impl\Bag.cpp" />
+    <ClCompile Include="impl\Element.cpp" />
+    <ClCompile Include="impl\Enemy.cpp" />
+    <ClCompile Include="impl\Hero.cpp" />
+    <ClCompile Include="impl\main.cpp" />
+    <ClCompile Include="impl\Map.cpp" />
+    <ClCompile Include="impl\Potion.cpp" />
+    <ClCompile Include="impl\SQM.cpp" />
+    <ClCompile Include="impl\Weapon.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -130,28 +152,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Teste\objects\Bag.h" />
-    <ClInclude Include="..\..\Teste\objects\Belt.h" />
-    <ClInclude Include="..\..\Teste\objects\Element.h" />
-    <ClInclude Include="..\..\Teste\objects\Enemy.h" />
-    <ClInclude Include="..\..\Teste\objects\Hero.h" />
-    <ClInclude Include="..\..\Teste\objects\Map.h" />
-    <ClInclude Include="..\..\Teste\objects\Potion.h" />
-    <ClInclude Include="..\..\Teste\objects\SQM.h" />
-    <ClInclude Include="..\..\Teste\objects\Weapon.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Teste\impl\Bag.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Element.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Enemy.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Hero.cpp" />
-    <ClCompile Include="..\..\Teste\impl\main.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Map.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Potion.cpp" />
-    <ClCompile Include="..\..\Teste\impl\SQM.cpp" />
-    <ClCompile Include="..\..\Teste\impl\Weapon.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

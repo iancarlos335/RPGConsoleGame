@@ -15,60 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Teste\objects\Bag.h">
+    <ClInclude Include="objects\Bag.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Belt.h">
+    <ClInclude Include="objects\Belt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Element.h">
+    <ClInclude Include="objects\Element.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Enemy.h">
+    <ClInclude Include="objects\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Hero.h">
+    <ClInclude Include="objects\Hero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Map.h">
+    <ClInclude Include="objects\Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Potion.h">
+    <ClInclude Include="objects\Potion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\SQM.h">
+    <ClInclude Include="objects\SQM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Teste\objects\Weapon.h">
+    <ClInclude Include="objects\Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Teste\impl\Enemy.cpp">
+    <ClCompile Include="impl\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Hero.cpp">
+    <ClCompile Include="impl\Hero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\main.cpp">
+    <ClCompile Include="impl\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Map.cpp">
+    <ClCompile Include="impl\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Potion.cpp">
+    <ClCompile Include="impl\Potion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\SQM.cpp">
+    <ClCompile Include="impl\SQM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Weapon.cpp">
+    <ClCompile Include="impl\Weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Bag.cpp">
+    <ClCompile Include="impl\Bag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Teste\impl\Element.cpp">
+    <ClCompile Include="impl\Element.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
