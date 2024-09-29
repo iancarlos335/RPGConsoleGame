@@ -11,13 +11,15 @@ const int MAX_WEIGHT = 20;
 class Belt
 {
 public:
-    void Full();
-    void Empty();
-    void Insert(int x);
-    void Delete(int &x);
+    Belt();
+    ~Belt();
+    bool Full();
+    bool Empty();
+    void Insert(int p, Element x);
+    void Delete(int p, Element& x);
     int Size();
-    void Retrieve(int &x, int p);
-    void Replace(int x, int p);
+    void Retrieve(int p, Element& x);
+    void Replace(Element x, int p);
     void Clear();
 
 private:

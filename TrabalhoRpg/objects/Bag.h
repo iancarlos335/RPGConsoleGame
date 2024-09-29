@@ -7,25 +7,26 @@ using namespace std;
 class Bag
 {
 public:
-    Bag();
-    ~Bag();
-    bool Full();
-    bool Empty();
+	Bag();
+	~Bag();
+	bool Full();
+	bool Empty();
 
-    void Push(Bag x);
-    void Pop(Bag &x);
+	void Push(Element x);
+	void Pop(Element& x);
 
-    void Clear();
-    int Size();
+	void Clear();
+	int Size();
 
 private:
-    struct BagNode
-    {
-        Element atributes;
-        BagNode *nextNode;
-    };
-    BagNode *top;
-    // pile structure
+	struct BagNode
+	{
+		Element element;
+		BagNode* nextNode;
+	};
+
+	typedef BagNode* BagPointer;
+	BagPointer top;
 };
 
 #endif

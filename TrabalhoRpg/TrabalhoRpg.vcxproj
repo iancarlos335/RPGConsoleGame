@@ -30,6 +30,7 @@
     <ClInclude Include="objects\Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Belt.cpp" />
     <ClCompile Include="impl\Bag.cpp" />
     <ClCompile Include="impl\Element.cpp" />
     <ClCompile Include="impl\Enemy.cpp" />

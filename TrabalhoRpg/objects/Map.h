@@ -13,11 +13,11 @@ public:
 	Map();
 	Map(int level);
 	~Map();
+	SQM sqm[MAX_ROUNDS];
 
 private:
 	int currentRound;
-	bool mandatoryWeapon = false;
-	SQM sqm[MAX_ROUNDS + 1];
+	bool mandatoryWeapon = false;	
 };
 
 #endif
