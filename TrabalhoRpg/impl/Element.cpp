@@ -6,11 +6,11 @@ Element::Element() {}
 
 Element::Element(int level, bool& mandatoryWeapon)
 {
-    srand(time(0));
 	if (mandatoryWeapon)
 	{
 		weapon = Weapon(level);
 		typeOfElement = 1;
+		mandatoryWeapon = false;
 	}
 	else
 	{

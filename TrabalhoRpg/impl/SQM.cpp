@@ -13,7 +13,6 @@ SQM::SQM(int level, bool isBattleRound, bool& mandatoryWeapon)
 		element = Element(level, mandatoryWeapon);
 	else
 	{
-		srand(time(0));
 		switch (rand() % 2)
 		{
 		case 0:

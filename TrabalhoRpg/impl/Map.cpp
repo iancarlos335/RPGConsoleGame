@@ -6,7 +6,7 @@ Map::Map() {}
 
 Map::Map(int level)
 {
-	srand(time(0));
+	bool mandatoryWeapon = level == 1 ? true : false;
 	int firstBattle = rand() % (MAX_ROUNDS - 5 + 1) + 5;                    // 5 to 10 SQM paths
 	int lastBattle = rand() % (MAX_ROUNDS - firstBattle + 1) + firstBattle; // 5 to 10 SQM paths
 
@@ -14,7 +14,7 @@ Map::Map(int level)
 	{
 		if (firstBattle == i + 1 || lastBattle == i + 1)
 			sqm[i] = SQM(level, true, mandatoryWeapon);
-		else if (level == 1 && i == 3) { // Hero doesn't have any weapon before first battle
+		else if (level == 1 && i == 3 && mandatoryWeapon) { // Hero doesn't have any weapon before first battle
 			sqm[i] = SQM(level, false, mandatoryWeapon);
 		}
 		else

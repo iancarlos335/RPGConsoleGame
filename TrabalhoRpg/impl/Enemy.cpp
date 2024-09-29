@@ -4,7 +4,6 @@ using namespace std;
 
 Enemy::Enemy() {}
 Enemy::Enemy(int level) {
-	srand(time(0));
 	switch (rand() % 4)
 	{
 	case 0:

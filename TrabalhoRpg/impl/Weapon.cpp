@@ -6,8 +6,6 @@ Weapon::Weapon() {}
 
 Weapon::Weapon(int level)
 {
-    srand(time(0));
-
     switch (rand() % 5)
     {
     case 0:
