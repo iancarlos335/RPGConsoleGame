@@ -1,4 +1,3 @@
-#include "Enemy.h"
 #include "Element.h"
 #include "SQM.h"
 using namespace std;
@@ -17,7 +16,7 @@ public:
 
 private:
 	int currentRound;
-	bool mandatoryWeapon = false;	
+	bool mandatoryWeapon = false;
 };
 
 #endif

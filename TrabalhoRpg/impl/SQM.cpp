@@ -5,7 +5,7 @@ using namespace std;
 
 SQM::SQM() {}
 
-SQM::SQM(int level, bool isBattleRound, bool& mandatoryWeapon)
+SQM::SQM(int level, bool& mandatoryWeapon)
 {
 	if (isBattleRound)
 		enemy = Enemy(level);

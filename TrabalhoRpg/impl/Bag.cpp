@@ -30,7 +30,7 @@ void Bag::Pop(Element& x) {
 	BagPointer p;
 	if (Empty())
 	{
-		cout << "Pilha Vazia";
+		cout << "Mochila vazia!";
 		abort();
 	}
 	x = top->element;

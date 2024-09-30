@@ -15,11 +15,11 @@ public:
     ~Belt();
     bool Full();
     bool Empty();
-    void Insert(int p, Element x);
-    void Delete(int p, Element& x);
+    void Insert(int p, Element element);
+    void Delete(int p, Element& element);
     int Size();
-    void Retrieve(int p, Element& x);
-    void Replace(Element x, int p);
+    void Retrieve(int p, Element& element);
+    void Replace(Element element, int p);
     void Clear();
 
 private:

@@ -12,13 +12,18 @@ Map::Map(int level)
 
 	for (int i = 0; i < MAX_ROUNDS; i++)
 	{
-		if (firstBattle == i + 1 || lastBattle == i + 1)
-			sqm[i] = SQM(level, true, mandatoryWeapon);
-		else if (level == 1 && i == 3 && mandatoryWeapon) { // Hero doesn't have any weapon before first battle
-			sqm[i] = SQM(level, false, mandatoryWeapon);
+		if (firstBattle == i + 1 || lastBattle == i + 1) {
+			sqm[i] = SQM(level, mandatoryWeapon);
+			sqm->isBattleRound = true;
 		}
-		else
-			sqm[i] = SQM(level, false, mandatoryWeapon);
+		else if (level == 1 && i == 3 && mandatoryWeapon) { // Hero doesn't have any weapon before first battle
+			sqm[i] = SQM(level, mandatoryWeapon);
+			sqm->isBattleRound = false;
+		}
+		else {
+			sqm[i] = SQM(level, mandatoryWeapon);
+			sqm->isBattleRound = false;
+		}
 	}
 }
 
