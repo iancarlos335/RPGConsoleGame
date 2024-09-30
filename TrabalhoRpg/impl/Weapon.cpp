@@ -6,7 +6,7 @@ Weapon::Weapon() {}
 
 Weapon::Weapon(int level)
 {
-    switch (rand() % 5)
+    switch (rand() % 4)
     {
     case 0:
         name = "Espada longa";
@@ -29,13 +29,19 @@ Weapon::Weapon(int level)
         damage = 40 * level;
         weight = 6;
         break;
-    case 4:
+    /*case 4:
         name = "Adagas venenosas";
         damage = 20 * level;
         weight = 4;
         roundsWithEfect = 2;
-        break;
+        break;*/
     }
 }
 
 Weapon::~Weapon() {}
+
+
+string Weapon::GetName() const { return name; }
+int Weapon::GetWeight() const { return weight; }
+int Weapon::GetDamage() const { return damage; }
+//int Weapon::GetRoundsWithEfect() const { return roundsWithEfect; }

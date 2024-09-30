@@ -6,7 +6,7 @@ Potion::Potion() {}
 
 Potion::Potion(int level)
 {
-	switch (rand() % 5)
+	switch (rand() % 4)
 	{
 	case 0:
 		name = "Poção de cura leve";
@@ -28,12 +28,18 @@ Potion::Potion(int level)
 		heal = 100 * level;
 		weight = 6;
 		break;
-	case 4:
+	/*case 4:
 		name = "Poção de resistência";
 		heal = 0;
 		endurance = 40 * level;
 		roundsWithEfect = 2;
 		weight = 5;
-		break;
+		break;*/
 	}
 }
+
+string Potion::GetName() const{ return name; }
+int Potion::GetWeight() const{ return weight; }
+int Potion::GetHeal() const{ return heal; }
+int Potion::GetEndurance() const{ return endurance; }
+//int Potion::GetRoundsWithEfect() const{ return roundsWithEfect; }
