@@ -13,7 +13,8 @@ class Hero
 public:
 	Hero();
 	~Hero();
-	void Heal();
+	void Heal(Potion potion);
+	void ChangeWeapon(Weapon weapon);
 	void Damage();
 	void createHero();
 
@@ -21,6 +22,7 @@ public:
 	Bag bag;
 
 	string name;
+	Weapon weapon;
 	int healthPoints = 100;
 	int endurance = 0;
 	int level;

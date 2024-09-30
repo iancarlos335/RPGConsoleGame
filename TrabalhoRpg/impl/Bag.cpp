@@ -46,3 +46,61 @@ void Bag::Clear() {
 }
 
 int Bag::Size() { return 0; }
+
+void Bag::ShowElements() {
+	BagPointer p;
+	p = top;
+	while (p != NULL)
+	{
+		cout << "Elemento: ";
+		if (p->element.typeOfElement == 1)
+			cout << "Arma" << endl;
+		else
+			cout << "Pocao" << endl;
+		p = p->nextNode;
+	}
+}
+
+void Bag::InteractWithBag(Hero& hero) {
+	BagPointer p;
+	p = top;
+	while (p != NULL)
+	{
+		if (p->element.typeOfElement == 1)
+		{
+			hero.weapon = p->element.weapon;
+			cout << "Arma equipada" << endl;
+		}
+		else
+		{
+			hero.potion = p->element.potion;
+			cout << "Pocao equipada" << endl;
+		}
+		p = p->nextNode;
+	}
+
+	int intAnswer;
+	Element element;
+	cout << "O que deseja fazer?" << endl
+		<< "1 - Ver elementos" << endl
+		<< "2 - Usar elemento" << endl
+		<< "3 - Sair" << endl;
+	cin >> intAnswer;
+	switch (intAnswer)
+	{
+	case 1:
+		ShowElements();
+		break;
+	case 2:
+		cout << "Escreva a posição do elemento deseja usar abaixo:" << endl;
+		cin >> intAnswer;
+		Retrieve(intAnswer, element);
+		if (element.typeOfElement == 1)
+			hero.Heal(element.potion);
+		else if (element.typeOfElement == 2)
+			hero.ChangeWeapon(element.weapon);
+		break;
+	case 3:
+		break;
+	}
+}

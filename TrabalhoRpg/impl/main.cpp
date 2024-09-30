@@ -27,40 +27,15 @@ int main()
 
 			// Hero status
 			cout << "Status do jogador:" << endl
-				 << "Nível: " << hero.level << endl
-				 << "Vida: " << hero.healthPoints << endl
-				 << "Resistência: " << hero.endurance << endl
-				 << endl
-				 << "-----------------------------------------------------" << endl
-				 << "Elementos no cinto: " << endl;
+				<< "Nível: " << hero.level << endl
+				<< "Vida: " << hero.healthPoints << endl
+				<< "Resistência: " << hero.endurance << endl
+				<< endl
+				<< "-----------------------------------------------------" << endl
+				<< "Elementos no cinto: " << endl;
 
-			// Hero belt content
-			for (int s = 0; i < hero.belt.Size(); s++)
-			{
-				hero.belt.Retrieve(s + 1, beltElements[s]);
-
-				cout << "Elemento: " << s + 1 << endl;
-
-				switch (beltElements[s].typeOfElement)
-				{
-				case 1:
-					cout << "Nome: " << endl
-						 << beltElements[s].weapon.GetName() << endl
-						 << "Dano: " << endl
-						 << beltElements[s].weapon.GetDamage() << endl
-						 << "Peso: " << endl
-						 << beltElements[s].weapon.GetWeight() << endl;
-					break;
-				case 2:
-					cout << "Nome: " << endl
-						 << beltElements[s].potion.GetName() << endl;
-					cout << "Cura: " << endl
-						 << beltElements[s].potion.GetHeal() << endl;
-					cout << "Peso: " << endl
-						 << beltElements[s].potion.GetWeight() << endl;
-					break;
-				};
-			}
+			// Hero belt elements
+			hero.belt.ShowElements();
 
 			if (currentSqm.isBattleRound)
 			{
@@ -70,13 +45,14 @@ int main()
 			{
 				char charAnswer;
 				int intAnswer;
+				Element element;
 				cout << "Você encontrou um elemento, deseja pegá-lo? (S/N)";
 				cin >> charAnswer;
 				if (charAnswer == 'S' || charAnswer == 's')
 				{
 					cout << "Onde você deseja colocar o elemento?" << endl
-						 << "1 - Cinto" << endl
-						 << "2 - Mochila" << endl;
+						<< "1 - Cinto" << endl
+						<< "2 - Mochila" << endl;
 					cin >> intAnswer;
 					switch (intAnswer)
 					{
@@ -89,7 +65,20 @@ int main()
 					}
 				}
 				else
-					cout << "Você deixou o elemento para trás.";
+					cout << "Você deixou o elemento para trás." << endl;
+
+				// Interact with belt
+				cout << "Deseja interagir com o cinto? (S/N)";
+				cin >> charAnswer;
+				if (charAnswer == 'S' || charAnswer == 's')
+					hero.belt.InteractWithBelt(hero);
+
+				// Interact with bag
+				cout << "Deseja interagir com a mochila? (S/N)";
+				cin >> charAnswer;
+				if (charAnswer == 'S' || charAnswer == 's')
+					hero.bag.InteractWithBag(hero);
+
 			}
 			else
 			{

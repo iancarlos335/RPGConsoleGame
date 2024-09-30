@@ -1,6 +1,7 @@
 #include "Weapon.h"
 #include "Potion.h"
 #include "Element.h"
+#include "Hero.h"
 using namespace std;
 
 #ifndef BELT_H
@@ -19,6 +20,8 @@ public:
     void Delete(int p, Element& element);
     int Size();
     void Retrieve(int p, Element& element);
+    void ShowElements();
+    void InteractWithBelt(Hero& hero);
     void Replace(Element element, int p);
     void Clear();
 

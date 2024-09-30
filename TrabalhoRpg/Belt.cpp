@@ -1,5 +1,6 @@
 #include <iostream>
 #include "./objects/Belt.h"
+#include "./objects/Hero.h"
 using namespace std;
 
 Belt::Belt() {
@@ -63,6 +64,62 @@ void Belt::Retrieve(int p, Element& x) {
 		abort();
 	}
 	x = Entry[p];
+};
+
+void Belt::ShowElements() {
+	int i;
+	for (i = 1; i <= count; i++)
+	{
+		cout << "Elemento " << i << endl;
+		switch (Entry[i].typeOfElement)
+		{
+		case 1:
+			cout << "Posição no Cinto: " << i << endl
+				<< "Nome: " << endl
+				<< Entry[i].weapon.GetName() << endl
+				<< "Dano: " << endl
+				<< Entry[i].weapon.GetDamage() << endl
+				<< "Peso: " << endl
+				<< Entry[i].weapon.GetWeight() << endl;
+			break;
+		case 2:
+			cout << "Posição no Cinto: " << i << endl
+				<< "Nome: " << endl
+				<< Entry[i].potion.GetName() << endl
+			    << "Cura: " << endl
+				<< Entry[i].potion.GetHeal() << endl
+				<< "Peso: " << endl
+				<< Entry[i].potion.GetWeight() << endl;
+			break;
+		};
+	}
+};
+
+void Belt::InteractWithBelt(Hero &hero) {
+	int intAnswer;
+	Element element;
+	cout << "O que deseja fazer?" << endl
+		<< "1 - Ver elementos" << endl
+		<< "2 - Usar elemento" << endl
+		<< "3 - Sair" << endl;
+	cin >> intAnswer;
+	switch (intAnswer)
+	{
+	case 1:
+		ShowElements();
+		break;
+	case 2:
+		cout << "Escreva a posição do elemento deseja usar abaixo:" << endl;
+		cin >> intAnswer;
+		Retrieve(intAnswer, element);
+		if (element.typeOfElement == 1)
+			hero.Heal(element.potion);
+		else if (element.typeOfElement == 2)
+			hero.ChangeWeapon(element.weapon);
+		break;
+	case 3:
+		break;
+	}
 };
 
 void Belt::Replace(Element x, int p) {
