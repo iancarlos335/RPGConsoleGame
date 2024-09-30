@@ -1,3 +1,9 @@
+/*
+Ian Carlos Azevedo Martins - 2212006
+Rafael Calixto Avelar - 2223579
+Gabriel Augusto Ravaneli - 2189116
+*/
+
 #include <iostream>
 #include "./objects/Belt.h"
 #include "./objects/Hero.h"

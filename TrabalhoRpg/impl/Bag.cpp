@@ -1,3 +1,9 @@
+/*
+Ian Carlos Azevedo Martins - 2212006
+Rafael Calixto Avelar - 2223579
+Gabriel Augusto Ravaneli - 2189116
+*/
+
 #include <iostream>
 #include "../objects/Bag.h"
 using namespace std;
@@ -83,8 +89,10 @@ void Bag::InteractWithBag(Hero& hero) {
 	Element element;
 	cout << "O que deseja fazer?" << endl
 		<< "1 - Ver elementos" << endl
-		<< "2 - Usar elemento" << endl
-		<< "3 - Sair" << endl;
+		<< "2 - Inserir novo elemento na mochila" << endl
+		<< "3 - Colocar elemento no cinto" << endl
+		<< "4 - Remover elemento da mochila" << endl
+		<< "5 - Sair" << endl;
 	cin >> intAnswer;
 	switch (intAnswer)
 	{
