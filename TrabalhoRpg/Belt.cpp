@@ -101,33 +101,6 @@ void Belt::ShowElements() {
 	}
 };
 
-void Belt::InteractWithBelt(Hero &hero) {
-	int intAnswer;
-	Element element;
-	cout << "O que deseja fazer?" << endl
-		<< "1 - Ver elementos" << endl
-		<< "2 - Usar elemento" << endl
-		<< "3 - Sair" << endl;
-	cin >> intAnswer;
-	switch (intAnswer)
-	{
-	case 1:
-		ShowElements();
-		break;
-	case 2:
-		cout << "Escreva a posição do elemento deseja usar abaixo:" << endl;
-		cin >> intAnswer;
-		Retrieve(intAnswer, element);
-		if (element.typeOfElement == 1)
-			hero.Heal(element.potion);
-		else if (element.typeOfElement == 2)
-			hero.ChangeWeapon(element.weapon);
-		break;
-	case 3:
-		break;
-	}
-};
-
 void Belt::Replace(Element x, int p) {
 	if (p < 1 || p > count)
 	{

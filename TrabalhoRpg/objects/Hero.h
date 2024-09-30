@@ -8,13 +8,11 @@ Gabriel Augusto Ravaneli - 2189116
 #include "Bag.h"
 using namespace std;
 
+
 #ifndef HERO_H
 #define HERO_H
-
-
 class Hero
 {
-
 public:
 	Hero();
 	~Hero();
@@ -25,6 +23,9 @@ public:
 
 	Belt belt;
 	Bag bag;
+
+	void InteractWithBag(Hero& hero);
+	void InteractWithBelt(Hero& hero);
 
 	string name;
 	Weapon weapon;

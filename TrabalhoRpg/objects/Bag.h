@@ -25,7 +25,6 @@ public:
 	int Size();
 
 	void ShowElements();
-	void InteractWithBag(Hero& hero);
 
 private:
 	struct BagNode

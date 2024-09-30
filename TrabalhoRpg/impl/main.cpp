@@ -7,6 +7,7 @@ Gabriel Augusto Ravaneli - 2189116
 #include "../objects/Map.h"
 #include "../objects/Hero.h"
 #include "../objects/Belt.h"
+#include "../objects/Bag.h"
 using namespace std;
 
 const int MAX_LEVEL = 5;
@@ -76,13 +77,13 @@ int main()
 				cout << "Deseja interagir com o cinto? (S/N)";
 				cin >> charAnswer;
 				if (charAnswer == 'S' || charAnswer == 's')
-					hero.belt.InteractWithBelt(hero);
+					hero.InteractWithBelt(hero);
 
 				// Interact with bag
 				cout << "Deseja interagir com a mochila? (S/N)";
 				cin >> charAnswer;
 				if (charAnswer == 'S' || charAnswer == 's')
-					hero.bag.InteractWithBag(hero);
+					hero.InteractWithBag(hero);
 
 			}
 			else

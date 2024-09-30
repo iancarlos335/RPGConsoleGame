@@ -6,6 +6,8 @@ Gabriel Augusto Ravaneli - 2189116
 
 #include <iostream>
 #include "../objects/Bag.h"
+#include "../objects/Hero.h"
+#include "../objects/Element.h"
 using namespace std;
 
 Bag::Bag() { top = NULL; }
@@ -64,51 +66,5 @@ void Bag::ShowElements() {
 		else
 			cout << "Pocao" << endl;
 		p = p->nextNode;
-	}
-}
-
-void Bag::InteractWithBag(Hero& hero) {
-	BagPointer p;
-	p = top;
-	while (p != NULL)
-	{
-		if (p->element.typeOfElement == 1)
-		{
-			hero.weapon = p->element.weapon;
-			cout << "Arma equipada" << endl;
-		}
-		else
-		{
-			hero.potion = p->element.potion;
-			cout << "Pocao equipada" << endl;
-		}
-		p = p->nextNode;
-	}
-
-	int intAnswer;
-	Element element;
-	cout << "O que deseja fazer?" << endl
-		<< "1 - Ver elementos" << endl
-		<< "2 - Inserir novo elemento na mochila" << endl
-		<< "3 - Colocar elemento no cinto" << endl
-		<< "4 - Remover elemento da mochila" << endl
-		<< "5 - Sair" << endl;
-	cin >> intAnswer;
-	switch (intAnswer)
-	{
-	case 1:
-		ShowElements();
-		break;
-	case 2:
-		cout << "Escreva a posição do elemento deseja usar abaixo:" << endl;
-		cin >> intAnswer;
-		Retrieve(intAnswer, element);
-		if (element.typeOfElement == 1)
-			hero.Heal(element.potion);
-		else if (element.typeOfElement == 2)
-			hero.ChangeWeapon(element.weapon);
-		break;
-	case 3:
-		break;
 	}
 }
