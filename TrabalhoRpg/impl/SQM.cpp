@@ -31,3 +31,22 @@ SQM::SQM(int level, bool& mandatoryWeapon)
 }
 
 SQM::~SQM() {}
+
+
+void SQM::createBattle(Hero& hero, Enemy& enemy)
+{
+	if (isBattleRound)
+	{
+		cout << "Batalha contra " << enemy.name << " iniciada!" << endl;
+		while (hero.healthPoints > 0 && enemy.healthPoints > 0)
+		{
+			hero.healthPoints -= enemy.atackPoints;
+			enemy.healthPoints -= hero.weapon.GetDamage();
+		}
+		if (hero.healthPoints > 0)
+			cout << "Batalha contra " << enemy.name << " vencida!" << endl;
+		else {
+			cout << "Você perdeu o jogo!" << endl;
+		}			
+	}
+}
