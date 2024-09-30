@@ -33,7 +33,7 @@ SQM::SQM(int level, bool& mandatoryWeapon)
 SQM::~SQM() {}
 
 
-void SQM::createBattle(Hero& hero, Enemy& enemy)
+void SQM::createBattle(Hero& hero, Enemy& enemy, bool& gameOver)
 {
 	if (isBattleRound)
 	{
@@ -47,6 +47,7 @@ void SQM::createBattle(Hero& hero, Enemy& enemy)
 			cout << "Batalha contra " << enemy.name << " vencida!" << endl;
 		else {
 			cout << "Você perdeu o jogo!" << endl;
+			gameOver = true;
 		}			
 	}
 }

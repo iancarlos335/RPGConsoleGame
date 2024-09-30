@@ -8,11 +8,13 @@ Gabriel Augusto Ravaneli - 2189116
 #include "../objects/Hero.h"
 #include "../objects/Belt.h"
 #include "../objects/Bag.h"
+#include <fstream>
 using namespace std;
 
 const int MAX_LEVEL = 5;
 int main()
 {
+	bool gameOver = false;
 	srand(time(0));
 	Map maps[MAX_LEVEL];
 	Hero hero = Hero();
@@ -45,7 +47,10 @@ int main()
 
 			if (currentSqm.isBattleRound)
 			{
-				currentSqm.createBattle(hero, currentSqm.enemy);
+				currentSqm.createBattle(hero, currentSqm.enemy, gameOver);
+				if (gameOver) {
+					abort();
+				}
 			}
 			else if (!currentSqm.isEmpty)
 			{
@@ -92,8 +97,17 @@ int main()
 			}
 		}
 	}
+
+	CreateScoresFile(hero);
+
 }
 
-void CreateBattle() {
-
+void CreateScoresFile(Hero hero) {
+	ofstream scoresFile;
+	scoresFile.open("high_scores.txt");
+	scoresFile << "Scores" << endl
+		<< "Nome do Heroi: " << hero.name << endl
+		<< "Nivel: " << hero.level << endl
+		<< "Vida: " << hero.healthPoints << endl;
+	scoresFile.close();
 }

@@ -23,7 +23,7 @@ public:
 	SQM(int level, bool& mandatoryWeapon);
 	~SQM();
 
-	void createBattle(Hero& hero, Enemy& enemy);
+	void createBattle(Hero& hero, Enemy& enemy, bool& gameOver);
 };
 
 #endif
